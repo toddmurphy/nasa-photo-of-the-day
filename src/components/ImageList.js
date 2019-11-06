@@ -9,7 +9,8 @@ const ImageList = () => {
     axios
       .get('https://api.nasa.gov/planetary/apod?api_key=rpCnWzJ5bMqSJf9V6NLhEExKWSNTno3XE8Q6gUs3')
       .then(response => {
-        console.log(response);
+        console.log(response.data);
+        setImages(response.data);
       })
       .catch(error => {
         console.log('You did not return any images', error);
