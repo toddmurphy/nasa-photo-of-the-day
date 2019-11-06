@@ -21,8 +21,9 @@ const ImageList = () => {
     // <div>
     //   <Image image={image} />;
     // </div>
+    //The above also works to pass all 'image' data as props, then acces in 'Image' by props.image.title etc..
     <div>
-      <Image image={image} title={image.title} hdurl={image.hdurl} explanation={image.explanation} date={image.date} />
+      <Image title={image.title} url={image.url} explanation={image.explanation} date={image.date} />
     </div>
   );
 };
