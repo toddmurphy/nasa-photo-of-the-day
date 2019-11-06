@@ -3,10 +3,10 @@ import React from 'react';
 const Image = props => {
   return (
     <div>
-      <h3>Image Title: {props.image.title}</h3>
-      <p>Image HDUrl: {props.image.hdurl}</p>
-      <p>Explanation: {props.image.explanation}</p>
-      <p>Date: {props.image.date}</p>
+      <h3>Image Title: {props.title}</h3>
+      <img src={props.hdurl} />
+      <p>Explanation: {props.explanation}</p>
+      <p>Date: {props.date}</p>
     </div>
   );
 };

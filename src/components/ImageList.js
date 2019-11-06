@@ -18,8 +18,11 @@ const ImageList = () => {
   }, []); //MUST add empty array dependency to avoid infinite loop
 
   return (
+    // <div>
+    //   <Image image={image} />;
+    // </div>
     <div>
-      <Image image={image} />;
+      <Image image={image} title={image.title} hdurl={image.hdurl} explanation={image.explanation} date={image.date} />
     </div>
   );
 };
