@@ -4,23 +4,19 @@ import styled from 'styled-components';
 const ImageWrapper = styled.img`
   width: 60%;
   margin-bottom: 2%;
+  box-shadow: 0 20px 25px -5px;
   /* height: 400px; */
 `;
 
 const ImageContainer = styled.div`
-  border: 5px solid green;
-  /* margin: auto; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 50%;
-  margin: auto; */
   padding: 5% 0;
 `;
 
 const ButtonContainer = styled.div`
-  border: 1px solid gold;
   display: flex;
   width: 30%;
   justify-content: space-around;
@@ -32,7 +28,6 @@ const Button = styled.button`
   height: 40px;
   border-radius: 7px;
   border: none;
-  /* background: dodgerblue; */
   color: #fff;
   font-size: 1rem;
   margin-bottom: 2%;
@@ -44,16 +39,17 @@ const Button = styled.button`
 
 const ImageTitle = styled.h3`
   font-size: 2.4rem;
+  font-weight: bold;
 `;
 
 const ExplanationTitle = styled.p`
   font-size: 1.4rem;
-  border: 2px solid blue;
   width: 75%;
 `;
 
 const DateText = styled.p`
   font-size: 1.4rem;
+  margin-top: 8%;
 `;
 
 const Image = props => {

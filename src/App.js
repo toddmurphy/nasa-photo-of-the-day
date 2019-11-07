@@ -8,7 +8,6 @@ const AppContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
 `;
 
 function App() {
