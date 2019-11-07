@@ -1,18 +1,21 @@
 import React from 'react';
 import ImageList from './components/ImageList';
 import styled from 'styled-components';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-const AppTitle = styled.h1`
-  font-size: 3rem;
+const AppContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
 `;
 
 function App() {
   return (
-    <div className="App">
-      <AppTitle>NASA: Image of the day</AppTitle>
+    <AppContainer>
       <ImageList />
-    </div>
+    </AppContainer>
   );
 }
 

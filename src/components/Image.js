@@ -3,16 +3,28 @@ import styled from 'styled-components';
 
 const ImageWrapper = styled.img`
   width: 60%;
+  margin-bottom: 2%;
   /* height: 400px; */
 `;
 
 const ImageContainer = styled.div`
-  border: 2px solid green;
+  border: 5px solid green;
   /* margin: auto; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* width: 50%;
+  margin: auto; */
+  padding: 5% 0;
+`;
+
+const ButtonContainer = styled.div`
+  border: 1px solid gold;
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+  padding: 2% 0;
 `;
 
 const Button = styled.button`
@@ -20,10 +32,14 @@ const Button = styled.button`
   height: 40px;
   border-radius: 7px;
   border: none;
-  background: dodgerblue;
+  /* background: dodgerblue; */
   color: #fff;
   font-size: 1rem;
   margin-bottom: 2%;
+
+  ${props => (props.type === 'primary' ? `background: dodgerblue;` : null)}
+  ${props => (props.type === 'secondary' ? `background: salmon;` : null)}
+  ${props => (props.type === 'neutral' ? ` background: black;` : null)}
 `;
 
 const ImageTitle = styled.h3`
@@ -44,9 +60,12 @@ const Image = props => {
   return (
     <ImageContainer>
       <ImageTitle>Image Title: {props.title}</ImageTitle>
-      <Button>Next Picture</Button>
-      <Button>View Galaxy</Button>
+      <ButtonContainer>
+        <Button type="primary">Next Picture</Button>
+        <Button type="secondary">View Galaxy</Button>
+      </ButtonContainer>
       <ImageWrapper src={props.url} />
+      <Button type="neutral">View Description</Button>
       <ExplanationTitle>Explanation: {props.explanation}</ExplanationTitle>
       <DateText>Date: {props.date}</DateText>
     </ImageContainer>
