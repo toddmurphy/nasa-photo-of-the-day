@@ -3,7 +3,7 @@ import axios from 'axios';
 import Image from '../components/Image';
 
 const ImageList = () => {
-  const [image, setImage] = useState([]);
+  const [image, setImage] = useState({});
 
   useEffect(() => {
     axios
