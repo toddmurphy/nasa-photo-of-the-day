@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ImageModal from './ImageModal';
 
 const ImageWrapper = styled.img`
   width: 60%;
@@ -23,7 +24,7 @@ const ButtonContainer = styled.div`
   padding: 2% 0;
 `;
 
-const Button = styled.button`
+const ButtonMain = styled.button`
   width: 150px;
   height: 40px;
   border-radius: 7px;
@@ -42,10 +43,10 @@ const ImageTitle = styled.h3`
   font-weight: bold;
 `;
 
-const ExplanationTitle = styled.p`
-  font-size: 1.4rem;
-  width: 75%;
-`;
+// const ExplanationTitle = styled.p`
+//   font-size: 1.4rem;
+//   width: 75%;
+// `;
 
 const DateText = styled.p`
   font-size: 1.4rem;
@@ -57,12 +58,16 @@ const Image = props => {
     <ImageContainer>
       <ImageTitle>Image Title: {props.title}</ImageTitle>
       <ButtonContainer>
-        <Button type="primary">Next Picture</Button>
-        <Button type="secondary">View Galaxy</Button>
+        <ButtonMain type="primary">Next Picture</ButtonMain>
+        <ButtonMain type="secondary">View Galaxy</ButtonMain>
       </ButtonContainer>
       <ImageWrapper src={props.url} />
-      <Button type="neutral">View Description</Button>
-      <ExplanationTitle>Explanation: {props.explanation}</ExplanationTitle>
+      {/* <ButtonMain type="neutral">View Description</ButtonMain> */}
+      {/* Export 'props.explanation' using the prop 'explanation'in front of 'equals' sign */}
+      <ImageModal type="neutral" explanation={props.explanation}>
+        View Description
+      </ImageModal>
+      {/* <ExplanationTitle>Explanation: {props.explanation}</ExplanationTitle> */}
       <DateText>Date: {props.date}</DateText>
     </ImageContainer>
   );
